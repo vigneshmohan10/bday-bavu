@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f7f1ff">
+  <meta name="description" content="A little birthday universe made with love.">
+  <title>For You, Always 💜</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient ambient-one" aria-hidden="true"></div>
+  <div class="ambient ambient-two" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="#home" aria-label="Go to home"><span class="brand-mark">♡</span> for you, always</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="#home" data-route="home">Home</a>
+      <a href="#memories" data-route="memories">Memories</a>
+      <a href="#letters" data-route="letters">Letters</a>
+      <a href="#our-story" data-route="our-story">Our story</a>
+      <a href="#surprise" data-route="surprise">Surprise</a>
+      <a href="#dreams" data-route="dreams">Our dreams</a>
+    </nav>
+    <button class="music-toggle" id="musicToggle" type="button" aria-label="Mute background music" title="Mute music"><svg class="music-icon" id="musicIcon" viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path d="M15.5 8.5a5 5 0 0 1 0 7M18.5 5.5a9 9 0 0 1 0 13"/></svg></button>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section class="page active" id="home" data-page="home">
+      <div class="hero section-wrap">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> A little note from my heart</p>
+          <p class="birthday-date">OCTOBER 16, 2026 <span>✦</span> YOUR SPECIAL DAY</p>
+          <h1>From a message<br>to my <em>forever person.</em></h1>
+          <p class="hero-subtitle">Who knew one little LinkedIn message could lead to something this special? From strangers to sharing our lives, dreams, and hearts—I'm glad it was you, Bavu. And if I could start our story all over again, I'd still choose you.</p>
+          <p class="hero-personal">Happy birthday, <span data-her-name>Bavu Kutty</span>. This little corner of the internet is just for you. 💜</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#surprise">Open your surprise <span>↗</span></a>
+            <a class="text-link" href="#memories">Take a little walk with me <span>↓</span></a>
+          </div>
+          <div class="hero-signature">made with all my love, Vicky <span>♥</span></div>
+        </div>
+        <div class="hero-art">
+          <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+          <span class="float-heart heart-one">♡</span><span class="float-heart heart-two">✦</span><span class="float-heart heart-three">♡</span>
+          <div class="hero-photo-frame">
+            <img src="assets/photos/photo-30.jpg" alt="Bavu as a little child">
+            
+            <div class="photo-note">little Bavu<br>my favourite kind of magic</div>
+          </div>
+          <div class="hero-sticker"><span>✧</span><br>you are<br>so loved</div>
+        </div>
+      </div>
+      <div class="home-bottom section-wrap">
+        <span>SCROLL THROUGH OUR LITTLE STORY</span><span class="scroll-line"></span><span>MADE JUST FOR YOU · ♡</span>
+      </div>
+    </section>
+
+    <!-- MEMORIES -->
+    <section class="page" id="memories" data-page="memories">
+      <div class="section-wrap page-content">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Little moments, forever</p>
+        <h2>My camera roll could<br>never <em>hold it all.</em></h2>
+        <p class="section-intro">Thirty-five little windows into your world, Bavu — solo moments, the two of us, and memories worth keeping. Tap any photo to see it a little closer.</p>
+        <div class="gallery-filters" role="group" aria-label="Filter photo memories">
+          <button class="gallery-filter active" type="button" data-filter="all" aria-pressed="true">All memories <span>35</span></button>
+          <button class="gallery-filter" type="button" data-filter="bavu" aria-pressed="false">Bavu <span>16</span></button>
+          <button class="gallery-filter" type="button" data-filter="together" aria-pressed="false">Us together <span>13</span></button>
+          <button class="gallery-filter" type="button" data-filter="little" aria-pressed="false">Little memories <span>6</span></button>
+        </div>
+        <div class="memory-grid photo-gallery" id="photoGallery" aria-live="polite"></div>
+        <p class="tiny-note">Made from the photos you shared. The gallery includes your original JPG photos and converted HEIC photos for browser compatibility.</p>
+        <div class="page-next"><a class="button button-outline" href="#letters">Next: a few words from my heart <span>→</span></a></div>
+      </div>
+    </section>
+
+    <!-- LETTERS -->
+    <section class="page" id="letters" data-page="letters">
+      <div class="section-wrap page-content letter-page">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Words I want you to keep</p>
+        <h2>Little letters for<br><em>my favourite person.</em></h2>
+        <p class="section-intro">Open whichever one your heart needs today.</p>
+        <div class="letter-list">
+          <article class="letter-card">
+            <button class="letter-trigger" aria-expanded="false"><span class="letter-icon">♡</span><span><small>LETTER NO. 01</small><strong>For the way you make life sweeter</strong></span><span class="letter-plus">+</span></button>
+            <div class="letter-body"><p>Bavu Kutty, it still makes me smile that a message about a job referral on LinkedIn became the beginning of us. I was working at Walmart, and neither of us could have known that one professional conversation would turn into sharing our lives, our families, our dreams, and so many little details. You turned an ordinary hello into one of the most meaningful parts of my life. Today, I hope you feel as loved as you make me feel.</p><p class="letter-signoff">Always yours, Vicky ♡</p></div>
+          </article>
+          <article class="letter-card">
+            <button class="letter-trigger" aria-expanded="false"><span class="letter-icon">✧</span><span><small>LETTER NO. 02</small><strong>Things I hope you always remember</strong></span><span class="letter-plus">+</span></button>
+            <div class="letter-body"><p>Bavu, I hope this new year of your life brings you peace, courage, laughter, and the things your heart has been quietly wishing for. Keep being curious, keep growing, and never make yourself smaller to fit into anyone else's expectations. I want to celebrate your wins, support you on the difficult days, listen when you need to talk, and remind you how capable you are when you forget it yourself.</p><p class="letter-signoff">I'm cheering for you, always. — Vicky ♡</p></div>
+          </article>
+          <article class="letter-card">
+            <button class="letter-trigger" aria-expanded="false"><span class="letter-icon">☾</span><span><small>LETTER NO. 03</small><strong>A promise for the days ahead</strong></span><span class="letter-plus">+</span></button>
+            <div class="letter-body"><p>I can't promise that every day will be perfect, Bavu Kutty. But I can promise to keep choosing us, to listen even when the conversation is difficult, to celebrate your happiness, and to face the uncertain days with honesty and care. I want more ordinary mornings, spontaneous adventures, familiar jokes, family moments, and dreams we build together. I want to keep learning who you are as we both grow into who we're becoming.</p><p class="letter-signoff">To us, and all that's ahead. With love, Vicky 💜</p></div>
+          </article>
+        </div>
+        <div class="page-next"><a class="button button-outline" href="#our-story">Next: our story <span>→</span></a></div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="page" id="our-story" data-page="our-story">
+      <div class="section-wrap page-content">
+        <p class="eyebrow"><span class="eyebrow-line"></span> The chapters so far</p>
+        <h2>Every love story has<br><em>its little milestones.</em></h2>
+        <p class="section-intro">It started with a LinkedIn message about a job referral, and on February 15, 2023, we met in person. I still love how an ordinary hello became our story.</p>
+        <div class="timeline">
+          <article class="timeline-item"><div class="timeline-dot">♡</div><div class="timeline-date">CHAPTER 01 · THE LINKEDIN MESSAGE</div><h3>A referral that became so much more</h3><p>You messaged me on LinkedIn for a job referral while I was working at Walmart. It began as a simple professional conversation, but it soon became something neither of us expected.</p><span class="timeline-edit">The little message that started everything.</span></article>
+          <article class="timeline-item"><div class="timeline-dot">✦</div><div class="timeline-date">CHAPTER 02 · THE SAME COLLEGE</div><h3>A little world getting smaller</h3><p>Then we discovered we had studied at the same college — and that you were my junior. That surprise gave us one more thing in common and one more reason to keep talking.</p><span class="timeline-edit">Two paths that had crossed before we knew it.</span></article>
+          <article class="timeline-item"><div class="timeline-dot">☼</div><div class="timeline-date">CHAPTER 03 · FEBRUARY 15, 2023</div><h3>The day we met in person</h3><p>After sharing stories about our lives, families, dreams, and experiences, we finally decided to meet. February 15, 2023, became a date I will always hold close — the beginning of our beautiful love story. ❤️</p><span class="timeline-edit">Our official first chapter together.</span></article>
+          <article class="timeline-item"><div class="timeline-dot">∞</div><div class="timeline-date">CHAPTER 04 · STILL WRITING</div><h3>Our next chapters, Bavu</h3><p>We have more to learn about each other, more places to see, more memories to make, and so many ordinary days to turn into something extraordinary. I cannot wait to keep writing this story with you.</p><span class="timeline-edit">The best pages are still ahead of us.</span></article>
+        </div>
+        <div class="page-next"><a class="button button-outline" href="#surprise">Next: your birthday surprise <span>→</span></a></div>
+      </div>
+    </section>
+
+    <!-- SURPRISE -->
+    <section class="page" id="surprise" data-page="surprise">
+      <div class="section-wrap page-content surprise-page">
+        <p class="eyebrow"><span class="eyebrow-line"></span> Your very own birthday moment</p>
+        <h2>Make a wish,<br><em>Bavu Kutty.</em></h2>
+        <p class="section-intro">Take a breath, close your eyes for a second, and wish for something wonderful.</p>
+        <div class="cake-scene">
+          <div class="cake-sparkle sparkle-a">✦</div><div class="cake-sparkle sparkle-b">✧</div><div class="cake-sparkle sparkle-c">✦</div>
+          <div class="cake">
+            <div class="candles">
+              <div class="candle candle-one"><span class="flame"></span></div>
+              <div class="candle candle-two"><span class="flame"></span></div>
+              <div class="candle candle-three"><span class="flame"></span></div>
+            </div>
+            <div class="cake-top"></div>
+            <div class="cake-layer cake-layer-top"><span class="icing-drip drip-one"></span><span class="icing-drip drip-two"></span><span class="icing-drip drip-three"></span><span class="icing-drip drip-four"></span></div>
+            <div class="cake-layer cake-layer-bottom"><span class="cake-decoration">♥</span><span class="cake-decoration">✦</span><span class="cake-decoration">♥</span></div>
+            <div class="cake-plate"></div>
+          </div>
+          <p class="cake-caption">three little flames, a million wishes</p>
+        </div>
+        <div class="cake-controls">
+          <button class="button button-primary" id="wishButton">I've made my wish ✨</button>
+          <button class="button button-soft" id="candleButton">Blow out the candles</button>
+        </div>
+        <p class="wish-message" id="wishMessage" aria-live="polite"></p>
+        <div class="page-next"><a class="button button-outline" href="#dreams">Next: all our tomorrows <span>→</span></a></div>
+      </div>
+    </section>
+
+    <!-- FUTURE -->
+    <section class="page" id="dreams" data-page="dreams">
+      <div class="section-wrap page-content dreams-page">
+        <p class="eyebrow"><span class="eyebrow-line"></span> A thousand tomorrows</p>
+        <h2>Things I can't wait<br><em>to do with you.</em></h2>
+        <p class="section-intro">Bavu, here are a few little things I hope we get to experience together — one lovely memory at a time.</p>
+        <div class="dreams-layout">
+          <div class="dreams-note"><span class="big-quote">“</span><p>May we always have something to look forward to, somewhere to wander, and a reason to hold hands along the way.</p><span class="note-stars">✦ ♡ ✦</span></div>
+          <div class="dream-points">
+            <article class="dream-point"><span class="dream-point-icon">☼</span><p>Watch a beautiful sunrise together, with nowhere else we need to be.</p></article>
+            <article class="dream-point"><span class="dream-point-icon">✈</span><p>Take a trip with no strict plans and discover somewhere new.</p></article>
+            <article class="dream-point"><span class="dream-point-icon">♡</span><p>Cook something new, laugh at the little mistakes, and enjoy it together.</p></article>
+            <article class="dream-point"><span class="dream-point-icon">☾</span><p>Have a cozy movie night under the stars.</p></article>
+            <article class="dream-point"><span class="dream-point-icon">⌖</span><p>Visit the places we've talked about and make our own memories there.</p></article>
+            <article class="dream-point"><span class="dream-point-icon">🎂</span><p>Celebrate many more birthdays, growing together through every chapter.</p></article>
+          </div>
+        </div>
+        <div class="final-note"><span class="final-sparkle">✧</span><p>Happy birthday, Bavu Kutty.<br>With all my love, <em>Vicky.</em></p><span class="final-heart">♡</span><a href="#home" class="text-link">Back to the beginning ↑</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer"><span>made with love, just for you</span><span>♡</span><span>one little universe, two hearts</span></footer>
+  <div class="photo-lightbox" id="photoLightbox" hidden role="dialog" aria-modal="true" aria-label="Photo viewer">
+    <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Close photo viewer">×</button>
+    <button class="lightbox-arrow lightbox-prev" id="lightboxPrev" type="button" aria-label="Previous photo">‹</button>
+    <figure><img id="lightboxImage" alt=""><figcaption id="lightboxCaption"></figcaption></figure>
+    <button class="lightbox-arrow lightbox-next" id="lightboxNext" type="button" aria-label="Next photo">›</button>
+  </div>
+  <audio id="backgroundMusic" src="assets/music/our-song.mp3" preload="auto" autoplay loop playsinline></audio>
+  <script src="script.js"></script>
+</body>
+</html>
