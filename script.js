@@ -291,7 +291,21 @@
 
   function renderGallery(filter = "all") {
     gallery.innerHTML = "";
-    const chosen = PHOTO_MEMORIES.filter((photo) => filter === "all" || photo.category === filter);
+    const childhoodFirst = ["assets/photos/photo-30.jpg", "assets/photos/photo-31.jpg"];
+    const categoryOrder = { little: 0, bavu: 1, together: 2 };
+    const chosen = PHOTO_MEMORIES
+      .filter((photo) => filter === "all" || photo.category === filter)
+      .slice()
+      .sort((a, b) => {
+        const aChild = childhoodFirst.indexOf(a.src);
+        const bChild = childhoodFirst.indexOf(b.src);
+        if (aChild !== -1 || bChild !== -1) {
+          if (aChild === -1) return 1;
+          if (bChild === -1) return -1;
+          return aChild - bChild;
+        }
+        return (categoryOrder[a.category] ?? 9) - (categoryOrder[b.category] ?? 9);
+      });
     chosen.forEach((photo, index) => {
       const card = document.createElement("figure");
       card.className = "memory-card gallery-card";
