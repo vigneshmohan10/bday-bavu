@@ -221,7 +221,7 @@ h1 em, h2 em, .final-note em { color: var(--purple); font-weight: 500; }
 .gallery-filter span { display:inline-grid; place-items:center; min-width:20px; height:20px; padding:0 5px; border-radius:99px; background:#f0e8f8; color:#8a6aa8; font-size:9px; }
 .gallery-filter.active,.gallery-filter:hover { background:#7853a6; border-color:#7853a6; color:white; }
 .gallery-filter.active span,.gallery-filter:hover span { background:rgba(255,255,255,.2); color:white; }
-.photo-gallery { grid-template-columns:repeat(4,minmax(0,1fr)); grid-auto-rows:auto; align-items:stretch; }
+.photo-gallery { grid-template-columns:repeat(4,minmax(0,1fr)); grid-auto-rows:300px; align-items:stretch; }
 .photo-gallery .gallery-card { aspect-ratio:4/5; min-width:0; cursor:zoom-in; border-radius:4px; }
 .photo-gallery .gallery-card img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
 .photo-gallery .gallery-card figcaption { left:14px; right:14px; bottom:13px; }
@@ -238,8 +238,8 @@ h1 em, h2 em, .final-note em { color: var(--purple); font-weight: 500; }
 .lightbox-close { top:18px; right:20px; width:42px; height:42px; border-radius:50%; font-size:30px; line-height:1; }
 .lightbox-arrow { position:relative; flex:0 0 42px; width:42px; height:42px; border-radius:50%; font-size:34px; }
 @media(max-width:1000px) { .photo-gallery { grid-template-columns:repeat(3,minmax(0,1fr)); } }
-@media(max-width:760px) { .photo-gallery { grid-template-columns:repeat(2,minmax(0,1fr)); grid-auto-rows:auto; } .photo-gallery .gallery-card { grid-row:auto; grid-column:auto; } .photo-gallery .gallery-card figcaption strong { font-size:15px; } .photo-lightbox { gap:7px; padding-inline:8px; } .photo-lightbox figure { width:calc(100vw - 105px); } .lightbox-arrow { flex-basis:34px; width:34px; height:34px; } }
-@media(max-width:380px) { .gallery-filter { padding:8px 10px; font-size:10px; } .photo-gallery .gallery-card figcaption { left:10px; right:10px; } .photo-gallery .gallery-card figcaption strong { font-size:13px; } }
+@media(max-width:760px) { .photo-gallery { grid-template-columns:repeat(2,minmax(0,1fr)); grid-auto-rows:250px; } .photo-gallery .gallery-card { grid-row:auto; grid-column:auto; } .photo-gallery .gallery-card figcaption strong { font-size:15px; } .photo-lightbox { gap:7px; padding-inline:8px; } .photo-lightbox figure { width:calc(100vw - 105px); } .lightbox-arrow { flex-basis:34px; width:34px; height:34px; } }
+@media(max-width:380px) { .photo-gallery { grid-auto-rows:220px; } .gallery-filter { padding:8px 10px; font-size:10px; } .photo-gallery .gallery-card figcaption { left:10px; right:10px; } .photo-gallery .gallery-card figcaption strong { font-size:13px; } }
 
 /* Future dreams are presented as romantic points, not a checklist. */
 .dream-points { border-top: 1px solid var(--line); }
@@ -319,3 +319,9 @@ h1 em, h2 em, .final-note em { color: var(--purple); font-weight: 500; }
   .first-message-card { max-width: 340px; transform: rotate(.5deg); }
   .first-message-photo-wrap, .first-message-photo-wrap img { max-height: 470px; }
 }
+
+
+/* iOS Safari gallery reliability and graceful fallback */
+.photo-gallery .gallery-card { position: relative; overflow: hidden; background: #e9dcf7; }
+.photo-gallery .gallery-card img { display: block; }
+.photo-gallery .image-load-fallback { position: absolute; inset: 0; display: grid; place-items: center; padding: 16px; color: #7853a6; background: linear-gradient(145deg,#f7f1ff,#e9dcf7); text-align: center; font: italic 15px var(--serif); }

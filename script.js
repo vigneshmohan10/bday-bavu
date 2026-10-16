@@ -315,8 +315,17 @@
       const img = document.createElement("img");
       img.src = photo.src;
       img.alt = photo.alt;
-      img.loading = index < 8 ? "eager" : "lazy";
+      // Eager-load this small, personal gallery for more reliable display in iOS Safari.
+      img.loading = "eager";
       img.decoding = "async";
+      img.onerror = () => {
+        card.classList.add("image-load-error");
+        img.style.display = "none";
+        const fallback = document.createElement("span");
+        fallback.className = "image-load-fallback";
+        fallback.textContent = "Photo temporarily unavailable";
+        card.append(fallback);
+      };
       const caption = document.createElement("figcaption");
       const tag = document.createElement("span");
       tag.textContent = photo.label;
